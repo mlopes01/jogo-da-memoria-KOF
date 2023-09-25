@@ -20,6 +20,8 @@ const checkcards = () => {
     const secondcardcharacter = secondcard.getAttribute('data-caracter')
 
     if (firstcharacter == secondcardcharacter) {
+
+
         firstcard = ''
         secondcard = ''
     } else {
