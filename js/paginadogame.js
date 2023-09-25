@@ -16,6 +16,16 @@ let firstcard = ''
 let secondcard = ''
 let score = 0
 
+
+const checkendgame = () => {
+    const disabledcards = document.querySelectorAll('.disable-card')
+
+    if (disabledcards.length == 24) {
+        alert('Parabens! voce finalizou o jogo')
+    }
+}
+
+
 const checkcards = () => {
     const firstcharacter = firstcard.getAttribute('data-caracter')
     const secondcardcharacter = secondcard.getAttribute('data-caracter')
@@ -28,6 +38,7 @@ const checkcards = () => {
         secondcard = ''
 
         score = score + 1
+        checkendgame()
     } else {
 
         setTimeout(() => {
