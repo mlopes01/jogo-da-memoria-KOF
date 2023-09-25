@@ -18,11 +18,28 @@ header {
     background-color: blue;
     margin: 0px 290px;
     border-radius: 20px;
-    padding: 0px 50px;
+    padding: 0px 80px;
+}
+
+header>div {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    display: flex;
+}
+
+.nameplayer {
+    padding-right: 15px;
+}
+
+.player {
+    padding-right: 70%;
+}
+
+.timer {
+    padding-left: 15px;
 }
 
 h1 {
-
     height: fit-content;
     place-self: center;
 }
