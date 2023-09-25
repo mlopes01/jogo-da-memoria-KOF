@@ -68,3 +68,8 @@ h1 {
 .reveal-card {
     transform: rotateY(180deg);
 }
+
+.disble-card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
