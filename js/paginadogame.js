@@ -1,4 +1,5 @@
 const grid = document.querySelector('.grid')
+const spanPlayer = document.querySelector('.player')
 const cartas = ['ANDY',
     'BLUE MARY',
     'CHANG',
@@ -99,6 +100,9 @@ const loadgame = () => {
     });
 }
 
+window.onload = () => {
+    const playerName = localStorage.getItem('player')
+    spanPlayer.innerHTML = playerName
 
-
-loadgame()
+    loadgame()
+}
