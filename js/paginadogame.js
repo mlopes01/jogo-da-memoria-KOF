@@ -17,7 +17,6 @@ const cartas = ['ANDY',
 let firstcard = ''
 let secondcard = ''
 let scoreerro = 0
-let scoreacerto = 0
 
 
 const checkendgame = () => {
@@ -25,7 +24,7 @@ const checkendgame = () => {
 
     if (disabledcards.length == 24) {
         clearInterval(this.loop)
-        alert(spanPlayer.innerHTML + ' Voce finalizou o jogo com ' + scoreerro + ' erros e ' + scoreacerto + ' acertos em ' + spanTimer.innerHTML + ' segundos')
+        alert(spanPlayer.innerHTML + ' Voce finalizou o jogo com ' + scoreerro + '  erros em  ' + spanTimer.innerHTML + ' segundos')
     }
 }
 
