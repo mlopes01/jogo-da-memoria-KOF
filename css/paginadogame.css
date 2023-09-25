@@ -19,7 +19,7 @@ h1 {
 .grid {
     grid-row: 2/ 3;
     grid-column: 1/ 2;
-    height: 900px;
+    height: 700px;
     width: 100%;
     max-width: 1300px;
     place-self: center;
@@ -50,7 +50,7 @@ h1 {
     height: 100%;
     position: absolute;
     border: 5px solid red;
-    background-size: 140px 290px;
+    background-size: 100% 100%;
     background-position: center;
 }
 

@@ -16,7 +16,23 @@ let firstcard = ''
 let secondcard = ''
 
 const checkcards = () => {
+    const firstcharacter = firstcard.getAttribute('data-caracter')
+    const secondcardcharacter = secondcard.getAttribute('data-caracter')
 
+    if (firstcharacter == secondcardcharacter) {
+        firstcard = ''
+        secondcard = ''
+    } else {
+
+        setTimeout(() => {
+            firstcard.classList.remove('reveal-card')
+            secondcard.classList.remove('reveal-card')
+
+            firstcard = ''
+            secondcard = ''
+        }, 1000)
+
+    }
 }
 const revealcard = ({ target }) => {
     if (target.parentNode.className.includes('reveal-card')) {
@@ -42,12 +58,13 @@ const creatcard = (personagem) => {
     frente.className = 'lado frente'
     verso.className = 'lado verso'
 
-    frente.style.backgroundImage = `url('../img/${personagem}.jpg')`
+    frente.style.backgroundImage = `url( '../img/${personagem}.jpg')`
     verso.style.backgroundImage = `url('../img/kof98...2.jpg')`
 
     card.appendChild(frente)
     card.appendChild(verso)
     card.addEventListener('click', revealcard)
+    card.setAttribute('data-caracter', personagem)
 
     grid.appendChild(card)
 
