@@ -14,16 +14,20 @@ const cartas = ['ANDY',
 
 let firstcard = ''
 let secondcard = ''
+let score = 0
 
 const checkcards = () => {
     const firstcharacter = firstcard.getAttribute('data-caracter')
     const secondcardcharacter = secondcard.getAttribute('data-caracter')
 
     if (firstcharacter == secondcardcharacter) {
-
+        firstcard.firstChild.classList.add('disable-card')
+        secondcard.firstChild.classList.add('disable-card')
 
         firstcard = ''
         secondcard = ''
+
+        score = score + 1
     } else {
 
         setTimeout(() => {
