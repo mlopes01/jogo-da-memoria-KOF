@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid')
 const spanPlayer = document.querySelector('.player')
+const spanTimer = document.querySelector('.timer')
 const cartas = ['ANDY',
     'BLUE MARY',
     'CHANG',
@@ -15,14 +16,16 @@ const cartas = ['ANDY',
 
 let firstcard = ''
 let secondcard = ''
-let score = 0
+let scoreerro = 0
+let scoreacerto = 0
 
 
 const checkendgame = () => {
     const disabledcards = document.querySelectorAll('.disable-card')
 
     if (disabledcards.length == 24) {
-        alert('Parabens! voce finalizou o jogo')
+        clearInterval(this.loop)
+        alert(spanPlayer.innerHTML + ' Voce finalizou o jogo com ' + scoreerro + ' erros e ' + scoreacerto + ' acertos em ' + spanTimer.innerHTML + ' segundos')
     }
 }
 
@@ -32,16 +35,16 @@ const checkcards = () => {
     const secondcardcharacter = secondcard.getAttribute('data-caracter')
 
     if (firstcharacter == secondcardcharacter) {
+        scoreacerto = scoreacerto + 1
         firstcard.firstChild.classList.add('disable-card')
         secondcard.firstChild.classList.add('disable-card')
 
         firstcard = ''
         secondcard = ''
 
-        score = score + 1
         checkendgame()
     } else {
-
+        scoreerro = scoreerro + 1
         setTimeout(() => {
             firstcard.classList.remove('reveal-card')
             secondcard.classList.remove('reveal-card')
@@ -100,9 +103,18 @@ const loadgame = () => {
     });
 }
 
+const startTimer = () => {
+    this.loop = setInterval(() => {
+        const currentTime = +spanTimer.innerHTML
+        spanTimer.innerHTML = currentTime + 1
+
+    }, 1000)
+}
+
 window.onload = () => {
     const playerName = localStorage.getItem('player')
     spanPlayer.innerHTML = playerName
-
+    startTimer()
     loadgame()
+
 }
