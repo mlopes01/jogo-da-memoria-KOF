@@ -34,7 +34,7 @@ const checkcards = () => {
     const secondcardcharacter = secondcard.getAttribute('data-caracter')
 
     if (firstcharacter == secondcardcharacter) {
-        scoreacerto = scoreacerto + 1
+
         firstcard.firstChild.classList.add('disable-card')
         secondcard.firstChild.classList.add('disable-card')
 
