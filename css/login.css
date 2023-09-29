@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/kof981.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .login-form {
