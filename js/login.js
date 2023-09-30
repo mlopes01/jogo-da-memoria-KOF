@@ -19,3 +19,11 @@ function handleSubmit(event) {
 input.addEventListener('input', validateinput)
 form.addEventListener('submit', handleSubmit)
 
+
+
+const loginaudio = document.getElementById('myAudio');
+loginaudio.volume = 0.2
+loginaudio.play();
+
+
+

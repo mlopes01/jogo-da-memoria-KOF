@@ -1,0 +1,39 @@
+@media (max-width:1100px) {
+    body {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .grid {
+        align-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 94px);
+    }
+}
+
+
+
+@media (max-width:600px) {
+    body {
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 0.6rem;
+        text-align: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    h1 {
+        font-size: 0.8rem;
+    }
+
+    .timer01 {
+        padding-left: 25%;
+    }
+
+
+
+    .lado {
+        border: 2px solid red;
+    }
+}

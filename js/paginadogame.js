@@ -25,9 +25,9 @@ const checkendgame = () => {
     if (disabledcards.length == 24) {
         clearInterval(this.loop)
         alert(spanPlayer.innerHTML + ' Voce finalizou o jogo com ' + scoreerro + '  erros em  ' + spanTimer.innerHTML + ' segundos')
+
     }
 }
-
 
 const checkcards = () => {
     const firstcharacter = firstcard.getAttribute('data-caracter')
@@ -110,10 +110,14 @@ const startTimer = () => {
     }, 1000)
 }
 
+const marysong = document.getElementById('page-game-song')
+marysong.volume = 0.2
+marysong.play()
+
+
 window.onload = () => {
     const playerName = localStorage.getItem('player')
     spanPlayer.innerHTML = playerName
     startTimer()
     loadgame()
-
 }
